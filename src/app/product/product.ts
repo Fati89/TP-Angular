@@ -15,6 +15,14 @@ export class Product implements OnInit{
 
   constructor(private productService: ProductService) {}
 
+  getAllProducts_http(){
+    this.productService.getAllProducts_http().subscribe({
+      next: resp => {
+        this.products = resp;
+      },
+      error: err => {}
+    });
+  }
   getAllProducts(){
     this.products = this.productService.getAllProducts();
   }
@@ -26,7 +34,12 @@ export class Product implements OnInit{
   handelDelete(product: any){
     let v = confirm('Etes vous sure de vouloir supprimer ce produit ?');
     if (v){
-      this.productService.DeleteProduct(product);
+      this.productService.DeleteProduct_http(product).subscribe({
+        next: resp => {
+          this.getAllProducts_http();
+        },
+        error: err => {console.log(err);}
+      });
       this.getAllProducts();
     }
   }
