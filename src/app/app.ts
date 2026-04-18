@@ -3,10 +3,13 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  imports: [
+    RouterLink
+  ],
+  standalone :true
 })
 export class App {
-  protected readonly title = signal('enset-app');
+  email : string = "fati@gmail.com";
 }
