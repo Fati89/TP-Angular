@@ -10,11 +10,8 @@ import { ProductService } from '../services/product-service';
   standalone: true
 })
 export class Product implements OnInit{
-
   products! : Array<any>;
-
   constructor(private productService: ProductService) {}
-
   getAllProducts_http(){
     this.productService.getAllProducts_http().subscribe({
       next: resp => {
@@ -30,7 +27,6 @@ export class Product implements OnInit{
   ngOnInit(){
     this.getAllProducts();
   }
-
   handelDelete(product: any){
     let v = confirm('Etes vous sure de vouloir supprimer ce produit ?');
     if (v){
