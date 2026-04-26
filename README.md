@@ -1,59 +1,70 @@
-# EnsetApp
+# EnsetApp - Application Angular Gestion de Produits
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+## Étape 1 : Installation d'Angular CLI
 
-## Development server
+![Installation Angular CLI](./images/1-install-angular.png)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## Étape 2 : Création du projet et génération des composants
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![Génération composant Home](./images/2-ng-g-c-home.png)
 
-## Code scaffolding
+![Génération composant Product](./images/2-ng-g-c-product.png)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## Étape 3 : Structure du projet
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+![Arborescence du projet](./images/9.png)
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## Étape 4 : Configuration des routes
 
-To build the project run:
+![Configuration des routes](./images/4.png)
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Étape 5 : Template principal
 
-## Running unit tests
+![Template principal app.html](./images/5.png)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## Étape 6 : Composant racine
 
-## Running end-to-end tests
+![Composant App](./images/3.png)
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## Étape 7 : Service produit (local + HTTP)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+![Service produit](./images/6.png)
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Étape 8 : Composant Product (gestion et suppression)
+
+![Composant Product](./images/7.png)
+
+---
+
+## Étape 9 : Composant Home
+
+![Composant Home](./images/8.png)
+
+---
+
+## Résumé
+
+| Composant | Rôle |
+|-----------|------|
+| Home | Page d'accueil |
+| Product | Liste et suppression des produits |
+| ProductService | Gestion des données (local / HTTP) |
+
+## Backend utilisé (optionnel)
+
+- GET : `http://localhost:8083/products`
+- DELETE : `http://localhost:8083/products/{id}`
